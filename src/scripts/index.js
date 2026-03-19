@@ -98,10 +98,10 @@ const handleInfoClick = (cardId) => {
       infoModalInfoList.innerHTML = '';
       infoModalUserList.innerHTML = '';
       
-      infoModalTitle.textContent = cardData.name;
+      infoModalTitle.textContent = "Информация о карточке";
       
       infoModalInfoList.append(
-        createInfoString("Описание:", cardData.description),
+        createInfoString("Описание:", cardData.name),
         createInfoString("Дата создания:", formatDate(new Date(cardData.createdAt))),
         createInfoString("Владелец:", cardData.owner.name),
         createInfoString("Количество лайков:", cardData.likes.length.toString())
